@@ -23,9 +23,8 @@ function verifyJWT(req, res, next) {
         }
         console.log('decoded', decoded);
         req.decoded = decoded;
+        next();
     })
-
-    next();
 }
 
 
